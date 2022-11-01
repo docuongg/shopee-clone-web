@@ -1,0 +1,252 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #fe6433;
+    --header-height: 120px;
+    --navbar-height: 28px;
+    --search-height: calc(var(--header-height) - var(--navbar-height));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6rem;
+}
+
+.m-2-4 {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--from));
+    }
+    to {
+        transform: scale(var(--to));
+    }
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+}
+
+.modal__layout {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.modal__body {
+    --from: 0.7;
+    --to: 1;
+    position: relative;
+    margin: auto;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    animation: growth linear 0.1s;
+}
+
+.form {
+    width: 500px;
+}
+
+.form__container {
+    padding: 0 32px;
+}
+
+.form__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+    padding: 0 12px;
+}
+
+.form__headding {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.form__switch-btn {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.form__body input {
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 1.4rem;
+    margin-top: 16px;
+}
+
+.form__aside {
+    margin: 0 8px;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 16px;
+}
+
+.form__aside a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.form__controls {
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    min-width: 140px;
+    height: 36px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    cursor: pointer;
+}
+
+.btn-back:hover {
+    background-color: #eee;
+}
+
+.btn.btn--primary {
+    background-color: var(--primary-color);
+}
+
+.btn.btn--primary:hover {
+    opacity: 0.8;
+}
+
+.form__social {
+    margin-top: 16px;
+    background-color: #F5F5F5;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.mr-8 {
+    margin-right: 8px;
+}
+
+.form__social .btn-with-icon {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.form__social i {
+    font-size: 1.8rem;
+    padding: 0 8px;
+}
+
+.form__social span {
+    padding: 0 16px;
+}
+
+.fb-color {
+    background-color: #3A5A98;
+    color: var(--white-color);
+}
+
+.gg-color {
+    color: var(--black-color);
+}
+
+.form__help {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+    font-size: 1.4rem;
+}
+
+.form__separate {
+    border-left: 1px solid #ddd;
+    margin: 0 16px;
+    height: 24px;
+}
+
+.form__help--link {
+    text-decoration: none;
+    line-height: 24px;
+    color: #ccc;
+    font-weight: 450;
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.pagination {
+    margin: 48px 0 32px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.pagination__item--active .pagination__link:hover {
+    opacity: 0.8;
+    color: var(--white-color);
+}
+
+.pagination__item {
+    height: 30px;
+    min-width: 40px;
+    margin: 0 6px;
+}
+
+.pagination__link {
+    display: block;
+    text-decoration: none;
+    color: #939393;
+    font-size: 1.8rem;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 2px;
+    font-weight: 410;
+}
+
+.pagination__link:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--primary-color);
+}
+
+.pagination__item--active .pagination__link {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
